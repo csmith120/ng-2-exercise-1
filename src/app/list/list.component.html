@@ -1,0 +1,7 @@
+<div>
+  <input [(ngModel)]="inputValue" placeholder="Add an item" />
+  <button (click)="addItem()">Add</button>
+</div>
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
