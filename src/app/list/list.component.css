@@ -8,7 +8,14 @@ div {
   }
   
   li {
+    display: flex;
+    align-items: center;
     padding: 0.5em;
     border-bottom: 1px solid #ccc;
+  }
+  
+  .crossed-out {
+    text-decoration: line-through;
+    color: #aaa;
   }
   

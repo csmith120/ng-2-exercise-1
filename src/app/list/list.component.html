@@ -2,6 +2,13 @@
   <input [(ngModel)]="inputValue" placeholder="Add an item" />
   <button (click)="addItem()">Add</button>
 </div>
+<div>
+  <input [(ngModel)]="removeValue" placeholder="Remove an item" />
+  <button (click)="removeItem()">Remove</button>
+</div>
 <ul>
-  <li *ngFor="let item of items">{{ item }}</li>
+  <li *ngFor="let item of items; let i = index">
+    <input type="checkbox" [(ngModel)]="item.crossedOut" (change)="toggleItem(i)" />
+    <span [class.crossed-out]="item.crossedOut">{{ item.value }}</span>
+  </li>
 </ul>
